@@ -89,3 +89,14 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
     -   `false` == 0 --> `true`
     -   `null` == 0 --> `false`
+    -   `null` < 1 --> `true`
+    -
+
+-   ## More weird comparisons
+
+    -   "" == 0 --> `true`
+    -   "" == 'false' --> `true`
+
+-   ## `==` compares value only and will coerce types
+-   ## `===` compares value and type and will not coerce types
+    -   3 === '3' --> false
