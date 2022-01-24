@@ -82,7 +82,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
     -   Then we have `false` < 1 - JS is going to coerce `false` into 0 -> 0 < 1
         -   which is true, so it returns `true`
 
--   Number(undefined) --> **`NaN`**
--   Number(null) --> **0**
+-   Number(`undefined`) --> **`NaN`**
+-   Number(`null`) --> **0**
 
 -   `undefined` and `null` behave in unexpected ways
