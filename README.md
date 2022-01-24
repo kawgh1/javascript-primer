@@ -85,7 +85,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 -   Number(`undefined`) --> **`NaN`**
 -   Number(`null`) --> **0**
 
--   `undefined` and `null` behave in unexpected ways
+-   ## `undefined` and `null` behave in unexpected ways
 
     -   `false` == 0 --> `true`
     -   `null` == 0 --> `false`
