@@ -113,6 +113,13 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
         -   In Javascript, functions ARE objects
 
 -   ## `this`
+
     -   `this` points to the parent Object
     -   so `this` inside a global function is going to point to the Window object
     -   only once `this` is used inside a created object will it point to that object
+
+-   ## `call()`, `apply()` and `bind()`
+
+    -   `call()`, `apply()` and `bind()` all have to do with manipulating `this` in a function
+
+    -   all functions have access to `call()`, `apply()` and `bind()`
