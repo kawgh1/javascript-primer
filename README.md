@@ -21,12 +21,12 @@ https://www.udemy.com/course/understand-javascript/
 -   This code prints **1**
 
           function b() {
-              var myVar = 3;
+              let myVar = 3;
               c();
           }
 
           function a() {
-              var myVar = 2;
+              let myVar = 2;
               b();
           }
 
@@ -34,7 +34,7 @@ https://www.udemy.com/course/understand-javascript/
               console.log(myVar);
           }
 
-          var myVar = 1;
+          let myVar = 1;
           a();
 
 -   by the time function c() is called, within the scope of function c() myVar === undefined. However, JS is going to look up the at function c()'s external reference environment, which in this case is the global scope. JS finds myVar === 1 in the global scope and uses that value, even though its undefined in function c().
@@ -66,7 +66,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
 -   forcing conversion of a variable from one type to another
 
-        var a = 1 + '2'
+        let a = 1 + '2'
         console.log(a)
 
         // prints '12'
@@ -85,17 +85,17 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 -   Number(`undefined`) --> **`NaN`**
 -   Number(`null`) --> **0**
 
--   ## `undefined` and `null` behave in unexpected ways
+## `undefined` and `null` behave in unexpected ways
 
     -   `false` == 0 --> `true`
     -   `null` == 0 --> `false`
     -   `null` < 1 --> `true`
     -
 
--   ## More weird comparisons
+## More weird comparisons
 
-    -   "" == 0 --> `true`
-    -   "" == 'false' --> `true`
+-   "" == 0 --> `true`
+-   "" == 'false' --> `true`
 
 -   ## `==` compares value only and will coerce types
 -   ## `===` compares value and type and will not coerce types
@@ -106,20 +106,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
     -   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
 
--   ## First Class Functions
+## First Class Functions
 
-    -   Everything you can do with other types, you can do with functions
-        -   Assign variables to them, pass them around, create them on the fly
-        -   In Javascript, functions ARE objects
+-   Everything you can do with other types, you can do with functions
+    -   Assign variables to them, pass them around, create them on the fly
+    -   In Javascript, functions ARE objects
 
--   ## `this`
+## `this`
 
-    -   `this` points to the parent Object
-    -   so `this` inside a global function is going to point to the Window object
-    -   only once `this` is used inside a created object will it point to that object
+-   `this` points to the parent Object
+-   so `this` inside a global function is going to point to the Window object
+-   only once `this` is used inside a created object will it point to that object
 
--   ## `call()`, `apply()` and `bind()`
+## `call()`, `apply()` and `bind()`
 
-    -   `call()`, `apply()` and `bind()` all have to do with manipulating `this` in a function
+-   `call()`, `apply()` and `bind()` all have to do with manipulating `this` in a function
 
-    -   all functions have access to `call()`, `apply()` and `bind()`
+-   all functions have access to `call()`, `apply()` and `bind()`
