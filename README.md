@@ -99,4 +99,20 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
 -   ## `==` compares value only and will coerce types
 -   ## `===` compares value and type and will not coerce types
+
     -   3 === '3' --> false
+
+-   Equality comparison table
+
+    -   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness
+
+-   ## First Class Functions
+
+    -   Everything you can do with other types, you can do with functions
+        -   Assign variables to them, pass them around, create them on the fly
+        -   In Javascript, functions ARE objects
+
+-   ## `this`
+    -   `this` points to the parent Object
+    -   so `this` inside a global function is going to point to the Window object
+    -   only once `this` is used inside a created object will it point to that object
