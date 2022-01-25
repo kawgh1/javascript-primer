@@ -4,19 +4,46 @@
 
 // all functions have access to call(), apply() and bind()
 
-function b() {
-    let myVar = 3;
-    c();
-}
+// ---------------------
+// ---------- BIND -----
+// ---------------------
 
-function a() {
-    let myVar = 2;
-    b();
-}
+// bind() lets you bind the object you want `this` to refer to, to a function
 
-function c() {
-    console.log(myVar);
-}
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    getFullName: function () {
+        let fullName = this.firstName + " " + this.lastName;
+        return fullName;
+    },
+};
 
-let myVar = 1;
-a();
+// here `this` is pointing to the global context, which doesnt know about the method getFullName()
+let logName = function (lang1, lang2) {
+    console.log("Logged: " + this.getFullName());
+};
+
+// logName(); // prints an error - this.getFullName is not a function
+
+// here we are binding the person object to the logName method
+let logName2 = function (lang1, lang2) {
+    console.log("Logged: " + this.getFullName());
+    console.log("Arguments: " + lang1 + " " + lang2);
+    console.log("---------------------");
+}.bind(person);
+
+logName2(); // now `this` is pointing to the person object
+
+// we can also do this
+// let logPersonName = logName.bind(person);
+
+// logPersonName();
+
+// ---------------------
+// ---------- CALL -----
+// ---------------------
+
+// call() allows you to invoke a function and pass it the object you want `this` to refer to
+
+logName.call(person);

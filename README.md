@@ -123,3 +123,16 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 -   `call()`, `apply()` and `bind()` all have to do with manipulating `this` in a function
 
 -   all functions have access to `call()`, `apply()` and `bind()`
+-   ### `bind()`
+    -   `bind()` is used to tell a function, 'hey, use this variable for `this`'
+        -   function buildEngine(){... code ...}.bind(engine)
+-   ### `call()`
+
+    -   `call()` allows you to invoke a function and pass it the object you want `this` to refer to
+        -   buildEngine.call(engine)
+    -   `call()` can also take the main functions regular parameters
+        -   buildEngine.call(engine, "part1", "part2")
+
+-   ### `apply()`
+    -   `apply()` acts just like call, but it expects an array of parameters, instead of comma separated
+        -   buildEngine.apply(engine, ["part1", "part2"])
