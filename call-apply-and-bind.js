@@ -47,3 +47,23 @@ logName2(); // now `this` is pointing to the person object
 // call() allows you to invoke a function and pass it the object you want `this` to refer to
 
 logName.call(person);
+
+// ------ FUNCTION BORROWING
+// here we use the method from the person object, but using apply() to tell that object to use person2
+
+let person2 = {
+    firstName: "Jane",
+    lastName: "Doe",
+};
+
+console.log(person.getFullName.apply(person2)); // prints Jane Doe - even tho called on person 'John Doe'
+
+// ------ FUNCTION CURRYING
+
+function multiply(a, b) {
+    return a * b;
+}
+
+let multiplyByTwo = multiply.bind(this, 2); // will bind the value 2 to a
+
+console.log(multiplyByTwo(3)); // prints 6

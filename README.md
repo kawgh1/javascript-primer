@@ -130,7 +130,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Oper
 
     -   `call()` allows you to invoke a function and pass it the object you want `this` to refer to
         -   buildEngine.call(engine)
-    -   `call()` can also take the main functions regular parameters
+    -   `call()` can also take the main function's regular parameters
         -   buildEngine.call(engine, "part1", "part2")
 
 -   ### `apply()`
