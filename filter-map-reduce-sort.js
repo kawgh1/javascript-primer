@@ -213,5 +213,50 @@ console.log(sortedCompanies3);
 // 8: {name: 'Company Eight', category: 'Technology', start: 2011, end: 2016}
 
 // sort ages
+// NOTE .sort() changes the underlying array and sorts it
 const sortAges = ages.sort((a, b) => a - b);
 console.log(sortAges);
+
+//////////////////////////////////
+// REDUCE
+//////////////////////////////////
+
+// add all the ages together
+
+let ageSum = 0;
+
+for (let i = 0; i < ages.length; i++) {
+    ageSum += ages[i];
+}
+
+console.log(ageSum);
+
+// returns 460
+
+// reduce
+
+const ageSum2 = ages.reduce((total, age) => total + age, 0);
+
+console.log(ageSum2);
+
+// returns 460
+
+// get total years for all companies
+
+const totalYears = companies.reduce(
+    (total, company) => total + (company.end - company.start),
+    0
+);
+
+console.log(totalYears);
+
+//////////////////////////////////
+// COMBINED
+//////////////////////////////////
+
+const combined = ages
+    .map((age) => age * 2)
+    .filter((age) => age > 40)
+    .sort((a, b) => a - b);
+
+console.log(combined);
